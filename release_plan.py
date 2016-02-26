@@ -39,6 +39,6 @@ else:
 	print("You're at capacity. Maintain the course.\n")
 
 # Project the impact of different team sizes
-print('1 developer on each platform would take ' + str(one_dev) + ' working days to complete the work.')
-print('2 developers on each platform would take ' + str(two_devs) + ' working days to complete the work.')
-print('4 developers on each platform would take ' + str(four_devs) + ' working days to complete the work.\n\n')
+print('One developer on each platform would take ' + str(one_dev) + ' working days to complete the work or ' + str(float(one_dev)/5) + ' weeks.') 
+print('Two developers on each platform would take ' + str(two_devs) + ' working days to complete the work or ' + str(float(two_devs)/5) + ' weeks.')
+print('Four developers on each platform would take ' + str(four_devs) + ' working days to complete the work or ' + str(float(four_devs)/5) + ' weeks.\n\n')
