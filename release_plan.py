@@ -3,9 +3,10 @@
 points = int(raw_input('How many points total?\n'))
 due_date = int(raw_input('How many working days until the due date?\n')) # in future figure out how to calculate due date
 current_team = int(raw_input('How many team members are on a platform?\n'))
+dev_speed = int(raw_input('How many points can a dev get done in a day?\n'))
 
-# convert points to number of days per platform. On this team, 1 point is a half day and there are two platforms
-platform_days = points / 4
+# convert points to number of days per platform. 
+platform_days = points / (dev_speed * 2)
 
 # devs could complete the number of points inputted in these number of days
 one_dev = platform_days
@@ -25,8 +26,7 @@ else:
 	print("You're gonna need a bigger team!\n")
 	
 # How many more points or less points can current team size handle
-point_day = 4 # each platform member can get 2 points done a day
-team_points_daily = point_day * current_team
+team_points_daily = dev_speed * current_team
 total_point_capacity = (team_points_daily * due_date)
 print('Your current team can get ' + str(total_point_capacity) + ' points done by the due date.\n')
 
