@@ -26,8 +26,8 @@ else:
 	print("You're gonna need a bigger team!\n")
 	
 # How many more points or less points can current team size handle
-
-team_points_daily = dev_speed * current_team
+point_day = 4 # each platform member can get 2 points done a day
+team_points_daily = point_day * current_team
 total_point_capacity = (team_points_daily * due_date)
 print('Your current team can get ' + str(total_point_capacity) + ' points done by the due date.\n')
 
